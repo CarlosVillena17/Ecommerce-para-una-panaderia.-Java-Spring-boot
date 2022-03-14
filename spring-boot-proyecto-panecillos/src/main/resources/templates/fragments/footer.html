@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www-thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title th:text="titulo"></title>
+</head>
+<body>
+<div class="footer" th:fragment="footer">
+                <!-- Begin Footer Static Top Area -->
+                <div class="footer-static-top">
+                    <div class="container centrar">
+                        <!-- Begin Footer Shipping Area -->
+                        <div class="footer-shipping pt-60 pb-55 pb-xs-25">
+                            <div class="row">
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-6 col-sm-6 pb-sm-55 pb-xs-55">
+                                    <div class="li-shipping-inner-box">
+                                        <div class="shipping-icon">
+                                            <img th:src="@{/images/shipping-icon/1.png}" alt="Shipping Icon">
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>Delivery Gratis</h2>
+                                            <p>Y devoluciones gratis. Ver caja para fechas de entrega </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-6 col-sm-6 pb-sm-55 pb-xs-55">
+                                    <div class="li-shipping-inner-box">
+                                        <div class="shipping-icon">
+                                            <img tH:src="@{/images/shipping-icon/2.png}" alt="Shipping Icon">
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>Pago Seguro</h2>
+                                            <p>Pague con los métodos de pago más populares y seguros del mundo.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-6 col-sm-6 pb-xs-30">
+                                    <div class="li-shipping-inner-box">
+                                        <div class="shipping-icon">
+                                            <img th:src="@{/images/shipping-icon/3.png}" alt="Shipping Icon">
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>Compra con confianza 
+                                            </h2>
+                                            <p>Nuestra Protección del Comprador cubre su compra desde el clic hasta la entrega .</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-6 col-sm-6 pb-xs-30">
+                                    <div class="li-shipping-inner-box">
+                                        <div class="shipping-icon">
+                                            <img th:src="@{/images/shipping-icon/4.png}" alt="Shipping Icon">
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>24/7 Ayuda</h2>
+                                            <p>Te ayudamos todo el dia para que puedas realizar bien tu compra.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                            </div>
+                        </div>
+                        <!-- Footer Shipping Area End Here -->
+                    </div>
+                </div>
+                <!-- Footer Static Top Area End Here -->
+                <!-- Foter con informacion -->
+                <div class="footer-static-middle">
+                    <div class="container">
+                        <div class="footer-logo-wrap pt-50 pb-35">
+                            <div class="row centrar">
+                                <!-- Begin Footer Logo Area -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="footer-logo">
+                                        <img th:src="@{/images/menu/logo/panecillos-logo.png}" alt="Footer Logo" style="width: 250px;">
+                                        <p class="info">
+                                            Soy un estudiante de Ing. de Software en UNMSM. Me gusta Java ☕ y Python 🐍. 
+                                        </p>
+                                    </div>
+                                    <ul class="des">
+                                        <li>
+                                            <span>Address: </span>
+                                            Perú-Callao
+                                        </li>
+                                        <li>
+                                            <span>Phone: </span>
+                                            <a href="#">(+51) 933323597</a>
+                                        </li>
+                                        <li>
+                                            <span>Email: </span>
+                                            <a href="mailto://info@yourdomain.com">carlos.villena2@unmsm.edu,pe</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Footer Logo Area End Here -->
+                                <!-- Begin Footer Block Area -->
+                                <div class="col-lg-2 col-md-3 col-sm-6">
+                                    <div class="footer-block">
+                                        <h3 class="footer-block-title">Productos</h3>
+                                        <ul>
+                                            <li><a href="#">Panes</a></li>
+                                            <li><a href="#">Pasteles</a></li>
+                                            <li><a href="#">Abarrotes</a></li>
+                                            <li><a href="#">Frutas</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Footer Block Area End Here -->
+                                <!-- Begin Footer Block Area -->
+                                <div class="col-lg-2 col-md-3 col-sm-6">
+                                    <div class="footer-block">
+                                        <h3 class="footer-block-title">Ofrecemos</h3>
+                                        <ul>
+                                            <li><a href="#">Delivery</a></li>
+                                            <li><a href="#">Confianza</a></li>
+                                            <li><a href="#">Descuentos</a></li>
+                                            <li><a href="#">Pago seguro</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Footer Block Area End Here -->
+                                <!-- Begin Footer Block Area -->
+                                <div class="col-lg-4">
+                                    <div class="footer-block">
+                                        <h3 class="footer-block-title">Sigueme</h3>
+                                        <ul class="social-link">
+                                            <li class="twitter">
+                                                <a href="https://twitter.com/" data-toggle="tooltip" target="_blank" title="Twitter">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <!-- - 
+                                            <li class="rss">
+                                                <a href="https://rss.com/" data-toggle="tooltip" target="_blank" title="RSS">
+                                                    <i class="fa fa-rss"></i>
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="google-plus">
+                                                <a href="https://www.plus.google.com/discover" data-toggle="tooltip" target="_blank" title="Google +">
+                                                    <i class="fa fa-google-plus"></i>
+                                                </a>
+                                            </li>
+                                           
+                                            
+                                            <li class="youtube">
+                                                <a href="https://www.youtube.com/" data-toggle="tooltip" target="_blank" title="Youtube">
+                                                    <i class="fa fa-youtube"></i>
+                                                </a>
+                                            </li>
+                                             -->
+                                            <li class="facebook">
+                                                <a href="https://www.facebook.com/" data-toggle="tooltip" target="_blank" title="Facebook">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li class="instagram">
+                                                <a href="https://www.instagram.com/" data-toggle="tooltip" target="_blank" title="Instagram">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Begin Footer Newsletter Area -
+                                    <div class="footer-newsletter">
+                                        
+                                        <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="footer-subscribe-form validate" target="_blank" novalidate>
+                                           <div id="mc_embed_signup_scroll">
+                                              <div id="mc-form" class="mc-form subscribe-form form-group" >
+                                                <input id="mc-email" type="email" autocomplete="off" placeholder="Enter your email" />
+                                                <button  class="btn" id="mc-submit">Subscribe</button>
+                                              </div>
+                                           </div>
+                                        </form>
+                                    </div>
+                                    ->
+                                     
+                                    <!-- Footer Newsletter Area End Here -->
+                                </div>
+                                <!-- Footer Block Area End Here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>

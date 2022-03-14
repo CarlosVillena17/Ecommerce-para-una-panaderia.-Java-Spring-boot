@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www-thymeleaf.org">
+<head th:replace="fragments/head::head">
+</head>
+<body>
+
+	<div class="body-wrapper">
+
+		<header th:replace="fragments/header::header"> </header>
+
+		<div class="breadcrumb-area">
+			<div class="container">
+				<div class="breadcrumb-content">
+					<ul>
+						<li><a th:href="@{/miscompras}">Mis Compras</a></li>
+						<li class="active">Detalle</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="text-center pt-25">
+		<h3>Detalle de mi compra</h3>
+		</div>
+		<div class="wishlist-area pt-25 pb-50">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<form action="#">
+							<div class="table-content table-responsive">
+								<table class="table">
+									<thead class="table-dark">
+										<tr>
+											<th >Codigo Compra</th>
+											<th >Producto</th>
+											<th >Precio Unitario</th>
+											<th >Cantidad</th>
+											<th >Total</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="compra: ${detalle}">
+											<td>[['D00000-'+${compra.idDetalle}]]</td>
+											<td th:text="${compra.producto.nombre}"></td>
+											<td th:text="'S/ '+${compra.producto.precio}"></td>
+											<td th:text="${compra.cantidad}"></td>
+											<td th:text="'S/ '+${compra.cantidad*compra.producto.precio}">
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer" th:replace="fragments/footer :: footer"></div>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script th:src="@{/js/vendor/jquery-1.12.4.min.js}"></script>
+	<!-- Popper js -->
+	<script th:src="@{/js/vendor/popper.min.js}"></script>
+	<!-- Bootstrap V4.1.3 Fremwork js -->
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+	<!-- Ajax Mail js -->
+	<script th:src="@{/js/ajax-mail.js}"></script>
+	<!-- Meanmenu js -->
+	<script th:src="@{/js/jquery.meanmenu.min.js}"></script>
+	<!-- Wow.min js -->
+	<script th:src="@{/js/wow.min.js}"></script>
+	<!-- Slick Carousel js -->
+	<script th:src="@{/js/slick.min.js}"></script>
+	<!-- Owl Carousel-2 js -->
+	<script th:src="@{/js/owl.carousel.min.js}"></script>
+	<!-- Magnific popup js -->
+	<script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+	<!-- Isotope js -->
+	<script th:src="@{/js/isotope.pkgd.min.js}"></script>
+	<!-- Imagesloaded js -->
+	<script th:src="@{/js/imagesloaded.pkgd.min.js}"></script>
+	<!-- Mixitup js -->
+	<script th:src="@{/js/jquery.mixitup.min.js}"></script>
+	<!-- Countdown -->
+	<script th:src="@{/js/jquery.countdown.min.js}"></script>
+	<!-- Counterup -->
+	<script th:src="@{/js/jquery.counterup.min.js}"></script>
+	<!-- Waypoints -->
+	<script th:src="@{/js/waypoints.min.js}"></script>
+	<!-- Barrating -->
+	<script th:src="@{/js/jquery.barrating.min.js}"></script>
+	<!-- Jquery-ui -->
+	<script th:src="@{/js/jquery-ui.min.js}"></script>
+	<!-- Venobox -->
+	<script th:src="@{/js/venobox.min.js}"></script>
+	<!-- Nice Select js -->
+	<script th:src="@{/js/jquery.nice-select.min.js}"></script>
+	<!-- ScrollUp js -->
+	<script th:src="@{/js/scrollUp.min.js}"></script>
+	<!-- Main/Activator js -->
+	<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

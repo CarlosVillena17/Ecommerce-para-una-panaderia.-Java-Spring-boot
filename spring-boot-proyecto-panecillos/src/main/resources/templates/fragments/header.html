@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www-thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="titulo"></title>
+</head>
+<body>
+	<header th:fragment="header">
+
+		<div class="header-middle pl-sm-0 pr-sm-0 pl-xs-0 pr-xs-0">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="logo pb-sm-30 pb-xs-30">
+							<a th:href="@{/index}"> <img
+								th:src="@{/images/menu/logo/panecillos-logo.png}" alt="logo"
+								th:style="'width:250px;'" />
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-9 pl-0 ml-sm-15 ml-xs-15">
+
+						<form th:action="@{/buscar}" class="hm-searchbox">
+							<input type="text" name="producto" placeholder="Encuentra tus productos aquí ...">
+							<button class="li-btn" type="submit">
+								<i class="fa fa-search"></i>
+							</button>
+						</form>
+
+						<div class="header-middle-right">
+							<ul class="hm-menu">
+
+								<li class="hm-wishlist"><a th:href="@{/miscompras}"> <span
+										class="cart-item-count wishlist-item-count">0</span> <img
+										alt="icono-comprar" th:src="@{/images/comprar.png}"
+										width="80%">
+
+								</a></li>
+
+								<li class="hm-minicart">
+									<div class="hm-minicart-trigger">
+										<span class="item-icon"></span> <span class="item-text">[['S/
+											'+${totalPagar}]] <span class="cart-item-count"
+											th:text="${listarCarrito.size()}"></span>
+										</span>
+									</div> <span></span>
+									<div class="minicart">
+										<ul class="minicart-product-list">
+											<li th:each="carrito: ${listarCarrito}"><a
+												href="single-product.html" class="minicart-product-image">
+													<img th:src="@{'/uploads/'+${carrito.foto}}"
+													alt="fotoproducto">
+											</a>
+												<div class="minicart-product-details">
+													<h6>
+														<a href="single-product.html" th:text="${carrito.nombre}"></a>
+													</h6>
+													<span th:text="'S/ '+${carrito.precioCompra}"></span>
+												</div>
+												<button class="close">
+													<i class="fa fa-close"></i>
+												</button></li>
+
+										</ul>
+										<p class="minicart-total">
+											SUBTOTAL: <span th:text="${totalPagar}"></span>
+										</p>
+										<div class="minicart-button">
+											<a th:href="@{/carrito}"
+												class="li-button li-button-dark li-button-fullwidth li-button-sm">
+												<span>Ver mi carrito</span>
+											</a> <a th:href="@{/compra}"
+												class="li-button li-button-fullwidth li-button-sm"> <span>Comprar</span>
+											</a>
+										</div>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- Header Middle Area End Here -->
+		<!-- Begin Header Bottom Area -->
+		<div class="header-bottom header-sticky d-none d-lg-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<!-- Begin Header Bottom Menu Area -->
+						<div class="hb-menu hb-menu-2 d-xl-block">
+							<nav>
+								<ul>
+									<li><a th:href="@{/index}">Home</a></li>
+
+
+									<li class="megamenu-holder"><a
+										th:href="@{/filtrarCategoria/1}">Panaderia</a>
+										<ul class="megamenu hb-megamenu">
+											<li><a th:href="@{/filtrarCategoria/1}">Pan Fracés</a>
+												<ul>
+													<li><a th:href="@{/filtrarCategoria/1}">Pan Chiabatta</a></li>
+													<li><a th:href="@{/filtrarCategoria/1}">Pan
+															Integral</a></li>
+													<li><a th:href="@{/filtrarCategoria/1}">Pan Árabe</a></li>
+													<li><a th:href="@{/filtrarCategoria/1}">Pan de
+															Yema</a></li>
+													<li><a th:href="@{/filtrarCategoria/1}">Pan
+															Carioca</a></li>
+												</ul></li>
+										</ul></li>
+									<li class="megamenu-holder"><a
+										th:href="@{/filtrarCategoria/2}">Pasteleria</a>
+										<ul class="megamenu hb-megamenu">
+											<li><a th:href="@{/filtrarCategoria/2}">Torta Chocolate</a>
+												<ul>
+													<li><a th:href="@{/filtrarCategoria/2}">Torta Cumpleaños</a></li>
+													<li><a th:href="@{/filtrarCategoria/2}">Kekes de
+															casa</a></li>
+													<li><a th:href="@{/filtrarCategoria/2}">Tortas
+															heladas</a></li>
+
+												</ul></li>
+										</ul></li>
+									<li class="megamenu-holder"><a
+										th:href="@{/filtrarCategoria/4}">Abarrotes</a>
+										<ul class="megamenu hb-megamenu">
+											<li><a th:href="@{/filtrarCategoria/4}">Alimentos de conserva</a>
+												<ul>
+													<li><a th:href="@{/filtrarCategoria/4}">Aceites</a></li>
+													<li><a th:href="@{/filtrarCategoria/4}"></a></li>
+													<li><a th:href="@{/filtrarCategoria/4}">Refrigerados</a></li>
+													
+												</ul></li>
+										</ul></li>
+
+
+									<li><a th:href="@{/productos}"
+										th:style="'margin-left: 10px;'">Productos</a></li>
+									<li><a href="contact.html">Contacto</a></li>
+									<!-- Begin Header Bottom Menu Information Area -->
+									<li class="megamenu-holder" th:style="'margin-left:15rem;'">
+
+										<a th:href="@{/login}" th:if="${usuarioPrincipal!=null}"
+										th:text="${usuarioPrincipal.nombre+' '+ usuarioPrincipal.apellido}"></a>
+										<a th:href="@{/login}" th:if="${usuarioPrincipal==null}"
+										th:text="'Mi cuenta'"></a>
+										<ul class="megamenu hb-megamenu">
+											<li th:if="${usuarioPrincipal==null}"><a
+												th:href="@{/login}"> Iniciar Sesion</a>
+
+												<ul>
+													<li><a th:href="@{/login}"
+														th:text="'Registrarme'"></a></li>
+													<li>
+												</ul></li>
+											<li th:if="${usuarioPrincipal!=null}"><a
+												th:href="@{/carrito}">Mi carrito</a>
+												<ul>
+													<li><a th:href="@{/miscompras}"
+														th:text="'Mis compras'"></a></li>
+													<li>
+												</ul>
+
+												<ul>
+													<li><a th:href="@{/cerrarSesion}"
+														th:if="${usuarioPrincipal!=null}"
+														th:text="'Cerrar sesión'"></a></li>
+													<li>
+												</ul></li>
+										</ul>
+									</li>
+
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu-area d-lg-none d-xl-none col-12">
+			<div class="container">
+				<div class="row">
+					<div class="mobile-menu"></div>
+				</div>
+			</div>
+		</div>
+	</header>
+</body>
+</html>

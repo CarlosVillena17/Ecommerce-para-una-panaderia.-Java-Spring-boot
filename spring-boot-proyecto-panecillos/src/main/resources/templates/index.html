@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www-thymeleaf.org">
+<head th:replace="fragments/head::head">
+
+</head>
+<body>
+
+	<div class="body-wrapper">
+
+		<header th:replace="fragments/header::header"> </header>
+
+		<div class="slider-with-banner">
+			<div class="container">
+				<div class="row">
+					<!-- Begin Category Menu Area -->
+					<div class="col-lg-3">
+						<!--Category Menu Start-->
+						<div class="category-menu">
+							<div class="category-heading">
+								<h2 class="categories-toggle">
+									<span>Categorias</span>
+								</h2>
+							</div>
+							<div id="cate-toggle" class="category-menu-list">
+								<ul>
+									<li class="right-menu"><a th:href="@{/filtrarCategoria/1}">La
+											Panaderia</a>
+										<ul class="cat-mega-menu">
+											<li class="right-menu cat-mega-title"><a
+												href="shop-left-sidebar.html">Pan de yema</a>
+												<ul>
+													<li><a href="#">Pan de frances</a></li>
+													<li><a href="#">Pan de levadura</a></li>
+													
+												</ul></li>
+										</ul></li>
+									<li class="right-menu"><a th:href="@{/filtrarCategoria/2}">Pasteleria</a>
+										<ul class="cat-mega-menu">
+											<li class="right-menu cat-mega-title"><a
+												th:href="@{/filtrarCategoria/2}">Torta de chocolate</a>
+												<ul>
+													<li><a th:href="@{/filtrarCategoria/2}">Torta helada</a></li>
+													<li><a th:href="@{/filtrarCategoria/2}">Torta de casa</a></li>
+													
+													
+												</ul></li>
+										</ul></li>
+									<li class="right-menu"><a th:href="@{/filtrarCategoria/3}">Confiteria</a>
+										<ul class="cat-mega-menu cat-mega-menu-2">
+											<li class="right-menu cat-mega-title"><a
+												th:href="@{/filtrarCategoria/3}">Bocaditos</a>
+												<ul>
+													<li><a th:href="@{/filtrarCategoria/3}">Bocaditos</a></li>
+													
+													
+												</ul></li>
+
+										</ul></li>
+									<li><a th:href="@{/filtrarCategoria/7}">Limpieza</a></li>
+									<li><a th:href="@{/filtrarCategoria/4}">Vinos</a></li>
+									<li><a th:href="@{/filtrarCategoria/4}">Abarrotes</a></li>
+									<li><a th:href="@{/filtrarCategoria/3}">Bocaditos</a></li>
+									<li><a th:href="@{/filtrarCategoria/6}">Frutas</a></li>
+									<li class="rx-child"><a th:href="@{/filtrarCategoria/8}">Verduras</a></li>
+									<li class="rx-parent"><a class="rx-default">Mas
+											Categorias</a> <a class="rx-show">Menos Categorias</a></li>
+								</ul>
+							</div>
+						</div>
+						<!--Category Menu End-->
+					</div>
+					<!-- Category Menu Area End Here -->
+					<!-- Begin Slider Area -->
+					<div class="col-lg-9">
+						<div class="slider-area pt-sm-30 pt-xs-30">
+							<div class="slider-active owl-carousel">
+								<!-- Begin Single Slide Area -->
+								<div
+									class="single-slide align-center-left animation-style-02 bg-4"
+									th:style="'background-image: url(images/slider/pan.png);'">
+									<div class="slider-progress"></div>
+									<div class="slider-content">
+										<h5>
+											Oferta de venta <span>-20% descuento</span> Esta semana
+										</h5>
+										<h2>Pan Francés Especial</h2>
+										<h3>
+											A partir de <span>S/2.52</span>
+										</h3>
+										<div class="default-btn slide-btn">
+											<a class="links" href="shop-left-sidebar.html">Comprar
+												ahora</a>
+										</div>
+									</div>
+								</div>
+								<!-- Single Slide Area End Here -->
+								<!-- Begin Single Slide Area -->
+								<div
+									class="single-slide align-center-left animation-style-01 bg-5"
+									th:style="'background-image: url(images/slider/torta.png);'">
+									<div class="slider-progress"></div>
+									<div class="slider-content">
+										<h5>
+											Oferta de venta <span>-10% de descuento</span>Esta semana
+										</h5>
+										<h2>Tortas de chocolate</h2>
+										<h3>
+											A partir de <span>S/40.00</span>
+										</h3>
+										<div class="default-btn slide-btn">
+											<a class="links" href="shop-left-sidebar.html">Comprar
+												ahora</a>
+										</div>
+									</div>
+								</div>
+								<!-- Single Slide Area End Here -->
+								<!-- Begin Single Slide Area -->
+								<div
+									class="single-slide align-center-left animation-style-02 bg-6"
+									th:style="'background-image: url(images/slider/abarrotess.png);'">
+									<div class="slider-progress"></div>
+									<div class="slider-content">
+										<h5>
+											Oferta de venta <span>-5% de descuento</span> Todo el mes
+										</h5>
+										<h2>Productos de primera necesidad</h2>
+										<h3>
+											A partir de<span>S/2.20</span>
+										</h3>
+										<div class="default-btn slide-btn">
+											<a class="links" href="shop-left-sidebar.html">Comprar
+												ahora</a>
+										</div>
+									</div>
+								</div>
+								<!-- Single Slide Area End Here -->
+							</div>
+						</div>
+					</div>
+					<!-- Slider Area End Here -->
+				</div>
+			</div>
+		</div>
+		<!-- Slider With Category Menu Area End Here -->
+		<!-- Begin Li's Static Banner Area -->
+		<div class="li-static-banner pt-20 pt-sm-30 pt-xs-30">
+			<div class="container">
+				<div class="row">
+					<!-- Begin Single Banner Area -->
+					<div class="col-lg-4 col-md-4">
+						<div class="single-banner pb-xs-30">
+							<a href="#"> <img src="images/banner/tortahelada.png"
+								alt="Li's Static Banner">
+							</a>
+						</div>
+					</div>
+					<!-- Single Banner Area End Here -->
+					<!-- Begin Single Banner Area -->
+					<div class="col-lg-4 col-md-4">
+						<div class="single-banner pb-xs-30">
+							<a href="#"> <img src="images/banner/alfajores.png"
+								alt="Li's Static Banner">
+							</a>
+						</div>
+					</div>
+					<!-- Single Banner Area End Here -->
+					<!-- Begin Single Banner Area -->
+					<div class="col-lg-4 col-md-4">
+						<div class="single-banner">
+							<a href="#"> <img src="images/banner/panyema.png"
+								alt="Li's Static Banner">
+							</a>
+						</div>
+					</div>
+					<!-- Single Banner Area End Here -->
+				</div>
+			</div>
+		</div>
+		<!-- Li's Static Banner Area End Here -->
+		<!-- SECCION OFERTAS ESPECIALES -->
+		<section class="product-area li-laptop-product Special-product pt-60 pb-45">
+                <div class="container">
+                    <div class="row">
+                        <!-- Begin Li's Section Area -->
+                        <div class="col-lg-12">
+                            <div class="li-section-title">
+                                <h2>
+                                    <span>Ofertas especiales</span>
+                                </h2>
+                            </div>
+                            <div class="row">
+                                <div class="special-product-active owl-carousel">
+                                    <div class="col-lg-12" th:each="p: ${categoriaPan.producto}">
+                                        <!-- single-product-wrap start -->
+                                        <div class="single-product-wrap">
+                                            <div class="product-image">
+                                                <a href="single-product.html">
+                                                    <img th:src="@{'/uploads/'+${p.foto}}" th:alt="${p.nombre}">
+                                                </a>
+                                                <span class="sticker">New</span>
+                                            </div>
+                                            <div class="product_desc">
+                                                <div class="product_desc_info">
+                                                    <div class="product-review">
+                                                        <h5 class="manufacturer">
+                                                            <a href="shop-left-sidebar.html" th:text="${p.nombre}"></a>
+                                                        </h5>
+                                                        <div class="rating-box">
+                                                            <ul class="rating">
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <h4><a class="product_name" href="single-product.html" th:text="${p.nombre}"></a></h4>
+                                                    <div class="price-box">
+                                                        <span class="new-price" th:text="'S/'+${p.precio}"></span>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="add-actions">
+                                                    <ul class="add-actions-link">
+                                                        <li class="add-cart active"><a th:href="@{/detalle/}+${p.id}">Agregar al carrito</a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- single-product-wrap end -->
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Li's Section Area End Here -->
+                    </div>
+                </div>
+            </section>
+		<!-- Li's Special Product Area End Here -->
+		<!-- Begin Li's Laptops Product | Home V2 Area -->
+		<section class="product-area li-laptop-product li-laptop-product-2 pb-45">
+                <div class="container">
+                    <div class="row">
+                        <!-- Begin Li's Section Area -->
+                        <div class="col-lg-12">
+                            <div class="li-section-title">
+                                <h2>
+                                    <span>Pasteleria</span>
+                                </h2>
+                                
+                            </div>
+                            <div class="li-banner-2 pt-15">
+                                <div class="row">
+                                    <!-- Begin Single Banner Area -->
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="single-banner">
+                                            <a href="#">
+                                                <img th:src="@{/images/banner/cumple.png}" alt="Torta de cumpleaños">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Single Banner Area End Here -->
+                                    <!-- Begin Single Banner Area -->
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="single-banner pt-xs-30">
+                                            <a href="#">
+                                                <img th:src="@{/images/banner/tortamaracuya.png}" alt="Torta de maracuya">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Single Banner Area End Here -->
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="product-active owl-carousel">
+                                    <div class="col-lg-12" th:each="p: ${categoriaPasteles.producto}">
+                                        <!-- single-product-wrap start -->
+                                        <div class="single-product-wrap">
+                                            <div class="product-image">
+                                                <a href="single-product.html">
+                                                    <img th:src="@{'/uploads/'+${p.foto}}"  th:alt="${p.nombre}">
+                                                </a>
+                                                <span class="sticker">New</span>
+                                            </div>
+                                            <div class="product_desc">
+                                                <div class="product_desc_info">
+                                                    <div class="product-review">
+                                                        <h5 class="manufacturer">
+                                                            <a href="shop-left-sidebar.html" th:text="${p.nombre}"></a>
+                                                        </h5>
+                                                        <div class="rating-box">
+                                                            <ul class="rating">
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <h4><a class="product_name" th:href="@{/detalle/}+${p.id}" th:text="${p.nombre}"></a></h4>
+                                                    <div class="price-box">
+                                                        <span class="new-price" th:text="'S/'+ ${p.precio}"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="add-actions">
+                                                    <ul class="add-actions-link">
+                                                        <li class="add-cart active"><a th:href="@{/detalle/}+${p.id}">Agregar al Carrito</a></li>
+                                                        
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- single-product-wrap end -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Li's Section Area End Here -->
+                    </div>
+                </div>
+            </section>
+		<!-- Li's Laptops Product | Home V2 Area End Here -->
+		<!-- Begin Li's TV & Audio Product Area -->
+		
+
+		<div class="footer" th:replace="fragments/footer :: footer">
+			
+			</div>
+
+			
+			<!-- Quick View | Modal Area End Here -->
+		</div>
+		<script th:src="@{/js/vendor/jquery-1.12.4.min.js}"></script>
+		<!-- Popper js -->
+		<script th:src="@{/js/vendor/popper.min.js}"></script>
+		<!-- Bootstrap V4.1.3 Fremwork js -->
+		<script th:src="@{/js/bootstrap.min.js}"></script>
+		<!-- Ajax Mail js -->
+		<script th:src="@{/js/ajax-mail.js}"></script>
+		<!-- Meanmenu js -->
+		<script th:src="@{/js/jquery.meanmenu.min.js}"></script>
+		<!-- Wow.min js -->
+		<script th:src="@{/js/wow.min.js}"></script>
+		<!-- Slick Carousel js -->
+		<script th:src="@{/js/slick.min.js}"></script>
+		<!-- Owl Carousel-2 js -->
+		<script th:src="@{/js/owl.carousel.min.js}"></script>
+		<!-- Magnific popup js -->
+		<script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+		<!-- Isotope js -->
+		<script th:src="@{/js/isotope.pkgd.min.js}"></script>
+		<!-- Imagesloaded js -->
+		<script th:src="@{/js/imagesloaded.pkgd.min.js}"></script>
+		<!-- Mixitup js -->
+		<script th:src="@{/js/jquery.mixitup.min.js}"></script>
+		<!-- Countdown -->
+		<script th:src="@{/js/jquery.countdown.min.js}"></script>
+		<!-- Counterup -->
+		<script th:src="@{/js/jquery.counterup.min.js}"></script>
+		<!-- Waypoints -->
+		<script th:src="@{/js/waypoints.min.js}"></script>
+		<!-- Barrating -->
+		<script th:src="@{/js/jquery.barrating.min.js}"></script>
+		<!-- Jquery-ui -->
+		<script th:src="@{/js/jquery-ui.min.js}"></script>
+		<!-- Venobox -->
+		<script th:src="@{/js/venobox.min.js}"></script>
+		<!-- Nice Select js -->
+		<script th:src="@{/js/jquery.nice-select.min.js}"></script>
+		<!-- ScrollUp js -->
+		<script th:src="@{/js/scrollUp.min.js}"></script>
+		<!-- Main/Activator js -->
+		<script th:src="@{/js/main.js}"></script>
+</body>
+</html>
